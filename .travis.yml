@@ -7,6 +7,8 @@ env:
 #  - unzip -q ${ACTIVATOR_ZIP_FILE}
 script:
   - env
+  - docker build -t myimage .
+  - docker run -it myimage rpm -qa
 notifications:
   # Email notifications are disabled to not annoy anybody.
   email: false
