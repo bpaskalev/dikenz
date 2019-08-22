@@ -1,0 +1,11 @@
+language: minimal
+env:
+  - DIKENZ_VERSION=0.1
+#install:
+#  - wget ${ACTIVATOR_ZIP_URL}
+#  - unzip -q ${ACTIVATOR_ZIP_FILE}
+script:
+  - env
+notifications:
+  # Email notifications are disabled to not annoy anybody.
+  email: false
