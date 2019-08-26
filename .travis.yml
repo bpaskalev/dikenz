@@ -1,4 +1,4 @@
-# manual triger 2019-08-22 09:03
+# manual triger 2019-08-26 10:01
 language: minimal
 env:
   - DIKENZ_VERSION=0.1
