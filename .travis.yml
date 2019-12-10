@@ -7,6 +7,6 @@ script:
   - env
   #- docker build -t myimage .
   #- docker run -it myimage rpm -qa
-  - ./test.sh
+  - ./test.sh $T
 notifications:
   email: false
