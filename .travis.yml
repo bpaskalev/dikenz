@@ -1,12 +1,12 @@
 # manual triger 2019-08-22 09:03
 language: minimal
 env:
-  - DIKENZ_VERSION=0.1
+  # - DIKENZ_VERSION=0.1
   - T=sag-mysql-server
 script:
   - env
   #- docker build -t myimage .
   #- docker run -it myimage rpm -qa
-  - test.sh
+  - ./test.sh
 notifications:
   email: false
