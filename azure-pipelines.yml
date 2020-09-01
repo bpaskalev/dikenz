@@ -1,7 +1,10 @@
 # Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+- task: Docker@2
+  inputs:
+    repository: 'letswebmacr'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+
 
 trigger:
 - master
@@ -16,8 +19,11 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    echo "FROM: alpine" > .Dockerfile
-    docker build -t letswebmacr.azurecr.io/delme:latest .
+    echo "FROM: alpine" > Dockerfile.alpine
+    docker build -t letswebmacr.azurecr.io/delme:latest -f Dockerfile.alpine .
+    docker login letswebmacr.azurecr.io -u  $ACCESS_TOKEN -p accessToken
     docker push letswebmacr.azurecr.io/delme:latest
-    az help
+    env
   displayName: 'Run a multi-line script'
+  env:
+    ACCESS_TOKEN: $(accessToken)
