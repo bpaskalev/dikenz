@@ -14,7 +14,7 @@ steps:
     echo See https://aka.ms/yaml
     echo "FROM alpine" > Dockerfile.alpine
     docker build -t letswebmacr.azurecr.io/delme:latest -f Dockerfile.alpine .
-    docker login letswebmacr.azurecr.io -u  $ACCESS_TOKEN -p accessToken
+    docker login letswebmacr.azurecr.io -p  $ACCESS_TOKEN -u  00000000-0000-0000-0000-000000000000
     docker push letswebmacr.azurecr.io/delme:latest
     env
   displayName: 'Run a multi-line script'
