@@ -1,8 +1,3 @@
-- task: Docker@2
-  inputs:
-    repository: 'letswebmacr'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
 trigger:
 - master
 
