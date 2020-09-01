@@ -9,6 +9,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
+    set -x
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
     echo "FROM alpine" > Dockerfile.alpine
