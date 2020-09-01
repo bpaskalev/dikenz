@@ -17,6 +17,10 @@ steps:
     docker login letswebmacr.azurecr.io -p  $ACCESS_TOKEN -u  00000000-0000-0000-0000-000000000000
     docker push letswebmacr.azurecr.io/delme:latest
     env
+    pwd
+    id
+    ls
+    ls -R
   displayName: 'Run a multi-line script'
   env:
     ACCESS_TOKEN: $(accessToken)
