@@ -17,6 +17,7 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
     echo "FROM: alpine" > .Dockerfile
-    docker build -t letswebmacr.azurecr.io/delme:latest
+    docker build -t letswebmacr.azurecr.io/delme:latest .
     docker push letswebmacr.azurecr.io/delme:latest
+    az help
   displayName: 'Run a multi-line script'
