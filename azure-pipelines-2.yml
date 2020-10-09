@@ -42,11 +42,13 @@ stages:
       inputs:
         containerregistrytype: 'Azure Container Registry'
         dockerComposeFile: '$(Build.SourcesDirectory)/docker-compose.yaml'
-        action: 'Run a Docker Compose command'
+        action: 'Run services'
     - task: Bash@3
       inputs:
         targetType: 'inline'
         script: |
           # Write your commands here
           
-          docker-compose ps
+          docker ps
+
+
