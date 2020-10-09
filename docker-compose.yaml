@@ -1,4 +1,4 @@
 version: "3.8"
 services:
   cent:
-    image: "cents:bis"
+    image: "centos:bis"
